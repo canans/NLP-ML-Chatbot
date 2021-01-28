@@ -1,0 +1,11 @@
+lambda = 0.2; data = rexp(1000,lambda);
+t_mean = 1/lambda;r_avg = mean(data);
+hist(data,breaks=25,main="Exponential Distribution");
+abline(v=t_mean,col='red',lty=2);abline(v=r_avg,col='blue',lty=2);
+t_mean - r_avg
+var(data)
+(1/lambda)^2 - var(data)
+mean_s<-c();for(i in 1:1000){mean_s <-c (mean_s , mean(rexp(40,lambda)));}
+hist(mean_s,breaks=25,main="Averages of Exponential Distributions",xlab="Averages");
+abline(v=mean(mean_s),col='red',lty=2);
+mean(mean_s)
